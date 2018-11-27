@@ -1,0 +1,184 @@
+{
+    "debug": true,
+    "process": {
+        "file_limit": 1000000,
+        "core_limit": 1000000000
+    },
+    "log": {
+        "path": "/var/log/trade/matchengine",
+        "flag": "fatal,error,warn,info,debug,trace",
+        "num": 10
+    },
+    "alert": {
+        "host": "matchengine",
+        "addr": "127.0.0.1:4444"
+    },
+    "svr": {
+        "bind": [
+            "tcp@0.0.0.0:7316",
+            "udp@0.0.0.0:7316"
+        ],
+        "buf_limit": 100,
+        "max_pkg_size": 10240,
+        "heartbeat_check": false
+    },
+    "cli": "tcp@127.0.0.1:7317",
+    "db_log": {
+        "host": "mysql",
+        "user": "exchange",
+        "pass": "exchange",
+        "name": "trade_log"
+    },
+    "db_history": {
+        "host": "mysql",
+        "user": "exchange",
+        "pass": "exchange",
+        "name": "trade_history"
+    },
+    "db_bitasia": {
+        "host": "mysql",
+        "user": "exchange",
+        "pass": "exchange",
+        "name": "trade_coin"
+    },
+    "assets": [
+        {
+            "name": "CNY",
+            "prec_save": 20,
+            "prec_show": 8
+        }, {
+            "name": "BTC",
+            "prec_save": 20,
+            "prec_show": 8
+        }, {
+            "name": "ETH",
+            "prec_save": 20,
+            "prec_show": 8
+        }, {
+            "name": "BCH",
+            "prec_save": 20,
+            "prec_show": 8
+        }, {
+            "name": "BAC",
+            "prec_save": 12,
+            "prec_show": 8
+        }, {
+            "name": "XRP",
+            "prec_save": 12,
+            "prec_show": 8
+        }, {
+            "name": "EOS",
+            "prec_save": 12,
+            "prec_show": 8
+        }, {
+            "name": "USDT",
+            "prec_save": 12,
+            "prec_show": 8
+        }
+    ],
+    "markets": [
+        {
+            "name": "BACCNY",
+            "stock": {
+                "name": "BAC",
+                "prec": 8
+            },
+            "money": {
+                "name": "CNY",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }, {
+            "name": "BTCCNY",
+            "stock": {
+                "name": "BTC",
+                "prec": 8
+            },
+            "money": {
+                "name": "CNY",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }, {
+            "name": "EOSCNY",
+            "stock": {
+                "name": "EOS",
+                "prec": 8
+            },
+            "money": {
+                "name": "CNY",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }, {
+            "name": "XMCBTC",
+            "stock": {
+                "name": "XMC",
+                "prec": 8
+            },  
+            "money": {
+                "name": "BTC",
+                "prec": 8
+            },  
+            "min_amount": "0.001"
+        }, {
+            "name": "BACETH",
+            "stock": {
+                "name": "BAC",
+                "prec": 8
+            },
+            "money": {
+                "name": "ETH",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }, {
+            "name": "EOSETH",
+            "stock": {
+                "name": "EOS",
+                "prec": 8
+            },
+            "money": {
+                "name": "ETH",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }, {
+            "name": "BACBCH",
+            "stock": {
+                "name": "BAC",
+                "prec": 8
+            },
+            "money": {
+                "name": "BCH",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }, {
+            "name": "ETHBCH",
+            "stock": {
+                "name": "ETH",
+                "prec": 8
+            },
+            "money": {
+                "name": "BCH",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }, {
+            "name": "EOSBCH",
+            "stock": {
+                "name": "EOS",
+                "prec": 8
+            },
+            "money": {
+                "name": "BCH",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }
+    ],
+    "brokers": "kafka:9092",
+    "slice_interval": 3600,
+    "slice_keeptime": 259200 
+}

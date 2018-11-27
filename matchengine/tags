@@ -1,0 +1,391 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASSET_NAME_MAX_LEN	me_config.h	40;"	d
+BALANCE_TYPE_AVAILABLE	me_balance.h	11;"	d
+BALANCE_TYPE_FREEZE	me_balance.h	12;"	d
+BALANCE_TYPE_PLEDGE	me_balance.h	13;"	d
+BUSINESS_NAME_MAX_LEN	me_config.h	41;"	d
+HISTORY_ORDER_DEAL	me_history.c	/^    HISTORY_ORDER_DEAL,$/;"	e	enum:__anon1	file:
+HISTORY_ORDER_DETAIL	me_history.c	/^    HISTORY_ORDER_DETAIL,$/;"	e	enum:__anon1	file:
+HISTORY_USER_BALANCE	me_history.c	/^    HISTORY_USER_BALANCE,$/;"	e	enum:__anon1	file:
+HISTORY_USER_DEAL	me_history.c	/^    HISTORY_USER_DEAL,$/;"	e	enum:__anon1	file:
+HISTORY_USER_ORDER	me_history.c	/^    HISTORY_USER_ORDER,$/;"	e	enum:__anon1	file:
+INCS	makefile	/^INCS = -I ..\/network -I ..\/utils -I ..\/depends$/;"	m
+LIBS	makefile	/^LIBS = -L ..\/utils -lutils -L ..\/network -lnetwork -L ..\/depends\/hiredis -Wl,-Bstatic -lev -ljansson -lmpdec -lrdkafka -lz -lssl -lcrypto -lhiredis -lcurl -Wl,-Bdynamic -lm -lpthread -ldl -lssl -lldap -llber -lgss -lgnutls -lidn -lnettle -lrtmp -lsasl2 -lmysqlclient -llz4$/;"	m
+MAX_ASSET_NUM	me_config.h	51;"	d
+MAX_MARKET_NUM	me_config.h	52;"	d
+MAX_PENDING_HISTORY	me_config.h	48;"	d
+MAX_PENDING_MESSAGE	me_config.h	49;"	d
+MAX_PENDING_OPERLOG	me_config.h	47;"	d
+ORDER_BOOK_MAX_LEN	me_config.h	44;"	d
+ORDER_EVENT_FINISH	me_message.h	/^    ORDER_EVENT_FINISH  = 3,$/;"	e	enum:__anon2
+ORDER_EVENT_PUT	me_message.h	/^    ORDER_EVENT_PUT     = 1,$/;"	e	enum:__anon2
+ORDER_EVENT_UPDATE	me_message.h	/^    ORDER_EVENT_UPDATE  = 2,$/;"	e	enum:__anon2
+ORDER_LIST_MAX_LEN	me_config.h	45;"	d
+SOURCE_MAX_LEN	me_config.h	42;"	d
+TARGET	makefile	/^TARGET  := matchengine.exe$/;"	m
+_ME_BALANCE_H_	me_balance.h	7;"	d
+_ME_CLI_H_	me_cli.h	7;"	d
+_ME_CONFIG_H_	me_config.h	7;"	d
+_ME_DUMP_H_	me_dump.h	7;"	d
+_ME_HISTORY_H_	me_history.h	7;"	d
+_ME_LOAD_H_	me_load.h	7;"	d
+_ME_MARKET_H_	me_market.h	7;"	d
+_ME_MESSAGE_H_	me_message.h	7;"	d
+_ME_OPERLOG_H_	me_operlog.h	7;"	d
+_ME_PERSIST_H_	me_persist.h	7;"	d
+_ME_SERVER_H_	me_server.h	7;"	d
+_ME_TRADE_H_	me_trade.h	7;"	d
+_ME_UPDATE_H_	me_update.h	7;"	d
+__process__	me_main.c	/^const char *__process__ = "matchengine";$/;"	v
+__version__	me_main.c	/^const char *__version__ = "0.1.0";$/;"	v
+add_cache	me_server.c	/^static int add_cache(sds cache_key, json_t *result)$/;"	f	file:
+alert	me_config.h	/^    alert_cfg           alert;$/;"	m	struct:settings
+amount	me_market.h	/^    mpd_t           *amount;$/;"	m	struct:order_t
+append_balance_trade_add	me_market.c	/^static int append_balance_trade_add(order_t *order, const char *asset, mpd_t *change, mpd_t *price, mpd_t *amount)$/;"	f	file:
+append_balance_trade_fee	me_market.c	/^static int append_balance_trade_fee(order_t *order, const char *asset, mpd_t *change, mpd_t *price, mpd_t *amount, mpd_t *fee_rate)$/;"	f	file:
+append_balance_trade_sub	me_market.c	/^static int append_balance_trade_sub(order_t *order, const char *asset, mpd_t *change, mpd_t *price, mpd_t *amount)$/;"	f	file:
+append_operlog	me_operlog.c	/^int append_operlog(const char *method, json_t *params)$/;"	f
+append_order_deal	me_history.c	/^static int append_order_deal(double t, uint32_t user_id, uint64_t deal_id, uint64_t order_id, uint64_t deal_order_id, int role, mpd_t *price, mpd_t *amount, mpd_t *deal, mpd_t *fee, mpd_t *deal_fee)$/;"	f	file:
+append_order_deal_history	me_history.c	/^int append_order_deal_history(double t, uint64_t deal_id, order_t *ask, int ask_role, order_t *bid, int bid_role, mpd_t *price, mpd_t *amount, mpd_t *deal, mpd_t *ask_fee, mpd_t *bid_fee)$/;"	f
+append_order_detail	me_history.c	/^static int append_order_detail(order_t *order)$/;"	f	file:
+append_order_history	me_history.c	/^int append_order_history(order_t *order)$/;"	f
+append_user_balance	me_history.c	/^static int append_user_balance(double t, uint32_t user_id, const char *asset, const char *business, mpd_t *change, mpd_t *balance, const char *detail)$/;"	f	file:
+append_user_balance_history	me_history.c	/^int append_user_balance_history(double t, uint32_t user_id, const char *asset, const char *business, mpd_t *change, const char *detail)$/;"	f
+append_user_deal	me_history.c	/^static int append_user_deal(double t, uint32_t user_id, const char *market, uint64_t deal_id, uint64_t order_id, uint64_t deal_order_id, int side, int role, mpd_t *price, mpd_t *amount, mpd_t *deal, mpd_t *fee, mpd_t *deal_fee)$/;"	f	file:
+append_user_order	me_history.c	/^static int append_user_order(order_t *order)$/;"	f	file:
+asks	me_market.h	/^    skiplist_t      *asks;$/;"	m	struct:market_t
+asset	me_balance.h	/^    char        asset[ASSET_NAME_MAX_LEN + 1];$/;"	m	struct:balance_key
+asset	me_config.h	/^struct asset {$/;"	s
+asset	me_update.c	/^    char        asset[ASSET_NAME_MAX_LEN + 1];$/;"	m	struct:update_key	file:
+asset_dict_hash_function	me_balance.c	/^static uint32_t asset_dict_hash_function(const void *key)$/;"	f	file:
+asset_dict_key_compare	me_balance.c	/^static int asset_dict_key_compare(const void *key1, const void *key2)$/;"	f	file:
+asset_dict_key_dup	me_balance.c	/^static void *asset_dict_key_dup(const void *key)$/;"	f	file:
+asset_dict_key_free	me_balance.c	/^static void asset_dict_key_free(void *key)$/;"	f	file:
+asset_dict_val_dup	me_balance.c	/^static void *asset_dict_val_dup(const void *val)$/;"	f	file:
+asset_dict_val_free	me_balance.c	/^static void asset_dict_val_free(void *val)$/;"	f	file:
+asset_exist	me_balance.c	/^bool asset_exist(const char *asset)$/;"	f
+asset_num	me_config.h	/^    size_t              asset_num;$/;"	m	struct:settings
+asset_prec	me_balance.c	/^int asset_prec(const char *asset)$/;"	f
+asset_prec_show	me_balance.c	/^int asset_prec_show(const char *asset)$/;"	f
+asset_type	me_balance.c	/^struct asset_type {$/;"	s	file:
+assets	me_config.h	/^    struct asset        *assets;$/;"	m	struct:settings	typeref:struct:settings::asset
+balance_add	me_balance.c	/^mpd_t *balance_add(uint32_t user_id, uint32_t type, const char *asset, mpd_t *amount)$/;"	f
+balance_del	me_balance.c	/^void balance_del(uint32_t user_id, uint32_t type, const char *asset)$/;"	f
+balance_dict_hash_function	me_balance.c	/^static uint32_t balance_dict_hash_function(const void *key)$/;"	f	file:
+balance_dict_key_compare	me_balance.c	/^static int balance_dict_key_compare(const void *key1, const void *key2)$/;"	f	file:
+balance_dict_key_dup	me_balance.c	/^static void *balance_dict_key_dup(const void *key)$/;"	f	file:
+balance_dict_key_free	me_balance.c	/^static void balance_dict_key_free(void *key)$/;"	f	file:
+balance_dict_val_dup	me_balance.c	/^static void *balance_dict_val_dup(const void *val)$/;"	f	file:
+balance_dict_val_free	me_balance.c	/^static void balance_dict_val_free(void *val)$/;"	f	file:
+balance_freeze	me_balance.c	/^mpd_t *balance_freeze(uint32_t user_id, const char *asset, mpd_t *amount)$/;"	f
+balance_get	me_balance.c	/^mpd_t *balance_get(uint32_t user_id, uint32_t type, const char *asset)$/;"	f
+balance_key	me_balance.h	/^struct balance_key {$/;"	s
+balance_set	me_balance.c	/^mpd_t *balance_set(uint32_t user_id, uint32_t type, const char *asset, mpd_t *amount)$/;"	f
+balance_status	me_balance.c	/^int balance_status(const char *asset, mpd_t *total, size_t *available_count, mpd_t *available, size_t *freeze_count, mpd_t *freeze)$/;"	f
+balance_sub	me_balance.c	/^mpd_t *balance_sub(uint32_t user_id, uint32_t type, const char *asset, mpd_t *amount)$/;"	f
+balance_total	me_balance.c	/^mpd_t *balance_total(uint32_t user_id, const char *asset)$/;"	f
+balance_unfreeze	me_balance.c	/^mpd_t *balance_unfreeze(uint32_t user_id, const char *asset, mpd_t *amount)$/;"	f
+bids	me_market.h	/^    skiplist_t      *bids;$/;"	m	struct:market_t
+brokers	me_config.h	/^    char                *brokers;$/;"	m	struct:settings
+business	me_update.c	/^    char        business[BUSINESS_NAME_MAX_LEN + 1];$/;"	m	struct:update_key	file:
+business_id	me_update.c	/^    uint64_t    business_id;$/;"	m	struct:update_key	file:
+cache_dict_hash_function	me_server.c	/^static uint32_t cache_dict_hash_function(const void *key)$/;"	f	file:
+cache_dict_key_compare	me_server.c	/^static int cache_dict_key_compare(const void *key1, const void *key2)$/;"	f	file:
+cache_dict_key_dup	me_server.c	/^static void *cache_dict_key_dup(const void *key)$/;"	f	file:
+cache_dict_key_free	me_server.c	/^static void cache_dict_key_free(void *key)$/;"	f	file:
+cache_dict_val_dup	me_server.c	/^static void *cache_dict_val_dup(const void *val)$/;"	f	file:
+cache_dict_val_free	me_server.c	/^static void cache_dict_val_free(void *val)$/;"	f	file:
+cache_timeout	me_config.h	/^    double              cache_timeout;$/;"	m	struct:settings
+cache_timer	me_server.c	/^static nw_timer cache_timer;$/;"	v	file:
+cache_val	me_server.c	/^struct cache_val {$/;"	s	file:
+clear_slice	me_persist.c	/^int clear_slice(time_t timestamp)$/;"	f
+cli	me_config.h	/^    cli_svr_cfg         cli;$/;"	m	struct:settings
+create_time	me_market.h	/^    double          create_time;$/;"	m	struct:order_t
+create_time	me_operlog.c	/^    double create_time;$/;"	m	struct:operlog	file:
+create_time	me_update.c	/^    double      create_time;$/;"	m	struct:update_val	file:
+cron_timer	me_main.c	/^nw_timer cron_timer;$/;"	v
+db_bitasia	me_config.h	/^    mysql_cfg           db_bitasia;$/;"	m	struct:settings
+db_history	me_config.h	/^    mysql_cfg           db_history;$/;"	m	struct:settings
+db_log	me_config.h	/^    mysql_cfg           db_log;$/;"	m	struct:settings
+deal_fee	me_market.h	/^    mpd_t           *deal_fee;$/;"	m	struct:order_t
+deal_money	me_market.h	/^    mpd_t           *deal_money;$/;"	m	struct:order_t
+deal_stock	me_market.h	/^    mpd_t           *deal_stock;$/;"	m	struct:order_t
+deals_id_start	me_market.c	/^uint64_t deals_id_start;$/;"	v
+debug	me_config.h	/^    bool                debug;$/;"	m	struct:settings
+delete_slice	me_persist.c	/^static int delete_slice(MYSQL *conn, uint64_t id, time_t timestamp)$/;"	f	file:
+detail	me_operlog.c	/^    char *detail;$/;"	m	struct:operlog	file:
+dict_asset	me_balance.c	/^static dict_t *dict_asset;$/;"	v	file:
+dict_balance	me_balance.c	/^dict_t *dict_balance;$/;"	v
+dict_cache	me_server.c	/^static dict_t *dict_cache;$/;"	v	file:
+dict_market	me_trade.c	/^static dict_t *dict_market;$/;"	v	file:
+dict_order_hash_function	me_market.c	/^static uint32_t dict_order_hash_function(const void *key)$/;"	f	file:
+dict_order_key	me_market.c	/^struct dict_order_key {$/;"	s	file:
+dict_order_key_compare	me_market.c	/^static int dict_order_key_compare(const void *key1, const void *key2)$/;"	f	file:
+dict_order_key_dup	me_market.c	/^static void *dict_order_key_dup(const void *key)$/;"	f	file:
+dict_order_key_free	me_market.c	/^static void dict_order_key_free(void *key)$/;"	f	file:
+dict_sql	me_history.c	/^static dict_t *dict_sql;$/;"	v	file:
+dict_sql_hash_function	me_history.c	/^static uint32_t dict_sql_hash_function(const void *key)$/;"	f	file:
+dict_sql_key	me_history.c	/^struct dict_sql_key {$/;"	s	file:
+dict_sql_key_compare	me_history.c	/^static int dict_sql_key_compare(const void *key1, const void *key2)$/;"	f	file:
+dict_sql_key_dup	me_history.c	/^static void *dict_sql_key_dup(const void *key)$/;"	f	file:
+dict_sql_key_free	me_history.c	/^static void dict_sql_key_free(void *key)$/;"	f	file:
+dict_update	me_update.c	/^static dict_t *dict_update;$/;"	v	file:
+dict_user_hash_function	me_market.c	/^static uint32_t dict_user_hash_function(const void *key)$/;"	f	file:
+dict_user_key	me_market.c	/^struct dict_user_key {$/;"	s	file:
+dict_user_key_compare	me_market.c	/^static int dict_user_key_compare(const void *key1, const void *key2)$/;"	f	file:
+dict_user_key_dup	me_market.c	/^static void *dict_user_key_dup(const void *key)$/;"	f	file:
+dict_user_key_free	me_market.c	/^static void dict_user_key_free(void *key)$/;"	f	file:
+dict_user_val_free	me_market.c	/^static void dict_user_val_free(void *key)$/;"	f	file:
+dump_balance	me_dump.c	/^int dump_balance(MYSQL *conn, const char *table)$/;"	f
+dump_balance_dict	me_dump.c	/^static int dump_balance_dict(MYSQL *conn, const char *table, dict_t *dict)$/;"	f	file:
+dump_balance_to_db	me_persist.c	/^static int dump_balance_to_db(MYSQL *conn, time_t end)$/;"	f	file:
+dump_order_to_db	me_persist.c	/^static int dump_order_to_db(MYSQL *conn, time_t end)$/;"	f	file:
+dump_orders	me_dump.c	/^int dump_orders(MYSQL *conn, const char *table)$/;"	f
+dump_orders_list	me_dump.c	/^static int dump_orders_list(MYSQL *conn, const char *table, skiplist_t *list)$/;"	f	file:
+dump_to_db	me_persist.c	/^int dump_to_db(time_t timestamp)$/;"	f
+execute_limit_ask_order	me_market.c	/^static int execute_limit_ask_order(bool real, market_t *m, order_t *taker)$/;"	f	file:
+execute_limit_bid_order	me_market.c	/^static int execute_limit_bid_order(bool real, market_t *m, order_t *taker)$/;"	f	file:
+execute_market_ask_order	me_market.c	/^static int execute_market_ask_order(bool real, market_t *m, order_t *taker)$/;"	f	file:
+execute_market_bid_order	me_market.c	/^static int execute_market_bid_order(bool real, market_t *m, order_t *taker)$/;"	f	file:
+fee_prec	me_config.h	/^    int                 fee_prec;$/;"	m	struct:market
+fee_prec	me_market.h	/^    int             fee_prec;$/;"	m	struct:market_t
+find_business_id	me_update.c	/^uint64_t find_business_id(uint64_t bid, const char *asset, const char *business, uint32_t user_id)$/;"	f
+fini_history	me_history.c	/^int fini_history(void)$/;"	f
+fini_message	me_message.c	/^int fini_message(void)$/;"	f
+fini_operlog	me_operlog.c	/^int fini_operlog(void)$/;"	f
+flush_log	me_operlog.c	/^static void flush_log(void)$/;"	f	file:
+freeze	me_market.h	/^    mpd_t           *freeze;$/;"	m	struct:order_t
+freeze_user_balance	me_update.c	/^int freeze_user_balance(bool real, uint32_t user_id, const char *asset, const char *business, uint64_t business_id, mpd_t *change, json_t *detail, int prec)$/;"	f
+get_asset_summary	me_server.c	/^static json_t *get_asset_summary(const char *name)$/;"	f	file:
+get_asset_type	me_balance.c	/^static struct asset_type *get_asset_type(const char *asset)$/;"	f	file:
+get_depth	me_server.c	/^static json_t *get_depth(market_t *market, size_t limit)$/;"	f	file:
+get_depth_merge	me_server.c	/^static json_t *get_depth_merge(market_t* market, size_t limit, mpd_t *interval)$/;"	f	file:
+get_last_slice	me_persist.c	/^static int get_last_slice(MYSQL *conn, time_t *timestamp, uint64_t *last_oper_id, uint64_t *last_order_id, uint64_t *last_deals_id)$/;"	f	file:
+get_market	me_trade.c	/^market_t *get_market(const char *name)$/;"	f
+get_market_depth	me_server.c	/^static json_t *get_market_depth(market_t *market)$/;"	f	file:
+get_market_summary	me_server.c	/^static json_t *get_market_summary(const char *name)$/;"	f	file:
+get_order_info	me_market.c	/^json_t *get_order_info(order_t *order)$/;"	f
+get_sql	me_history.c	/^static sds get_sql(struct dict_sql_key *key)$/;"	f	file:
+get_today_start	me_persist.c	/^static time_t get_today_start(void)$/;"	f	file:
+get_user_freeze_balance	me_persist.c	/^mpd_t *get_user_freeze_balance(uint32_t user_id, const char *asset, int prec)$/;"	f
+get_user_list	me_history.c	/^json_t *get_user_list()$/;"	f
+hash	me_history.c	/^    uint32_t hash;$/;"	m	struct:dict_sql_key	file:
+history_status	me_history.c	/^sds history_status(sds reply)$/;"	f
+history_thread	me_config.h	/^    int                 history_thread;$/;"	m	struct:settings
+id	me_config.h	/^    int                 id;$/;"	m	struct:asset
+id	me_market.h	/^    uint64_t        id;$/;"	m	struct:order_t
+id	me_operlog.c	/^    uint64_t id;$/;"	m	struct:operlog	file:
+init_asset_and_market	me_persist.c	/^int init_asset_and_market(bool market)$/;"	f
+init_asset_from_db	me_persist.c	/^int init_asset_from_db(MYSQL *conn)$/;"	f
+init_balance	me_balance.c	/^int init_balance()$/;"	f
+init_cli	me_cli.c	/^int init_cli(void)$/;"	f
+init_config	me_config.c	/^int init_config(const char *path)$/;"	f
+init_dict	me_balance.c	/^static int init_dict(void)$/;"	f	file:
+init_from_db	me_persist.c	/^int init_from_db(void)$/;"	f
+init_history	me_history.c	/^int init_history(void)$/;"	f
+init_log	me_main.c	/^static int init_log(void)$/;"	f	file:
+init_market_from_db	me_persist.c	/^int init_market_from_db(MYSQL *conn)$/;"	f
+init_message	me_message.c	/^int init_message(void)$/;"	f
+init_operlog	me_operlog.c	/^int init_operlog(void)$/;"	f
+init_persist	me_persist.c	/^int init_persist(void)$/;"	f
+init_process	me_main.c	/^static int init_process(void)$/;"	f	file:
+init_server	me_server.c	/^int init_server(void)$/;"	f
+init_trade	me_trade.c	/^int init_trade(void)$/;"	f
+init_update	me_update.c	/^int init_update(void)$/;"	f
+is_history_block	me_history.c	/^bool is_history_block(void)$/;"	f
+is_message_block	me_message.c	/^bool is_message_block(void)$/;"	f
+is_operlog_block	me_operlog.c	/^bool is_operlog_block(void)$/;"	f
+job	me_history.c	/^static nw_job *job;$/;"	v	file:
+job	me_operlog.c	/^static nw_job *job;$/;"	v	file:
+json_array_append_mpd	me_message.c	/^static json_t *json_array_append_mpd(json_t *message, mpd_t *val)$/;"	f	file:
+last_slice_time	me_persist.c	/^static time_t last_slice_time;$/;"	v	file:
+left	me_market.h	/^    mpd_t           *left;$/;"	m	struct:order_t
+list	me_operlog.c	/^static list_t *list;$/;"	v	file:
+list_balances	me_message.c	/^static list_t *list_balances;$/;"	v	file:
+list_deals	me_message.c	/^static list_t *list_deals;$/;"	v	file:
+list_orders	me_message.c	/^static list_t *list_orders;$/;"	v	file:
+load_assets	me_config.c	/^static int load_assets(json_t *root, const char *key)$/;"	f	file:
+load_balance	me_load.c	/^int load_balance(MYSQL *conn, const char *table)$/;"	f
+load_cancel_order	me_load.c	/^static int load_cancel_order(json_t *params)$/;"	f	file:
+load_freeze_balance	me_load.c	/^static int load_freeze_balance(json_t *params)$/;"	f	file:
+load_limit_order	me_load.c	/^static int load_limit_order(json_t *params)$/;"	f	file:
+load_market_order	me_load.c	/^static int load_market_order(json_t *params)$/;"	f	file:
+load_markets	me_config.c	/^static int load_markets(json_t *root, const char *key)$/;"	f	file:
+load_oper	me_load.c	/^static int load_oper(json_t *detail)$/;"	f	file:
+load_operlog	me_load.c	/^int load_operlog(MYSQL *conn, const char *table, uint64_t *start_id)$/;"	f
+load_operlog_from_db	me_persist.c	/^static int load_operlog_from_db(MYSQL *conn, time_t date, uint64_t *start_id)$/;"	f	file:
+load_orders	me_load.c	/^int load_orders(MYSQL *conn, const char *table)$/;"	f
+load_slice_from_db	me_persist.c	/^static int load_slice_from_db(MYSQL *conn, time_t timestamp)$/;"	f	file:
+load_update_balance	me_load.c	/^static int load_update_balance(json_t *params)$/;"	f	file:
+log	me_config.h	/^    log_cfg             log;$/;"	m	struct:settings
+main	me_main.c	/^int main(int argc, char *argv[])$/;"	f
+make_slice	me_persist.c	/^int make_slice(time_t timestamp)$/;"	f
+maker_fee	me_market.h	/^    mpd_t           *maker_fee;$/;"	m	struct:order_t
+market	me_config.h	/^struct market {$/;"	s
+market	me_market.h	/^    char            *market;$/;"	m	struct:order_t
+market_cancel_order	me_market.c	/^int market_cancel_order(bool real, json_t **result, market_t *m, order_t *order)$/;"	f
+market_create	me_market.c	/^market_t *market_create(struct market *conf)$/;"	f
+market_dict_hash_function	me_trade.c	/^static uint32_t market_dict_hash_function(const void *key)$/;"	f	file:
+market_dict_key_compare	me_trade.c	/^static int market_dict_key_compare(const void *key1, const void *key2)$/;"	f	file:
+market_dict_key_dup	me_trade.c	/^static void *market_dict_key_dup(const void *key)$/;"	f	file:
+market_dict_key_free	me_trade.c	/^static void market_dict_key_free(void *key)$/;"	f	file:
+market_get_order	me_market.c	/^order_t *market_get_order(market_t *m, uint64_t order_id)$/;"	f
+market_get_order_list	me_market.c	/^skiplist_t *market_get_order_list(market_t *m, uint32_t user_id)$/;"	f
+market_get_status	me_market.c	/^int market_get_status(market_t *m, size_t *ask_count, mpd_t *ask_amount, size_t *bid_count, mpd_t *bid_amount)$/;"	f
+market_num	me_config.h	/^    size_t              market_num;$/;"	m	struct:settings
+market_put_limit_order	me_market.c	/^int market_put_limit_order(bool real, json_t **result, market_t *m, uint32_t user_id, uint32_t side, mpd_t *amount, mpd_t *price, mpd_t *taker_fee, mpd_t *maker_fee, const char *source)$/;"	f
+market_put_market_order	me_market.c	/^int market_put_market_order(bool real, json_t **result, market_t *m, uint32_t user_id, uint32_t side, mpd_t *amount, mpd_t *taker_fee, const char *source)$/;"	f
+market_put_order	me_market.c	/^int market_put_order(market_t *m, order_t *order)$/;"	f
+market_status	me_market.c	/^sds market_status(sds reply)$/;"	f
+market_t	me_market.h	/^typedef struct market_t {$/;"	s
+market_t	me_market.h	/^} market_t;$/;"	t	typeref:struct:market_t
+markets	me_config.h	/^    struct market       *markets;$/;"	m	struct:settings	typeref:struct:settings::market
+message_status	me_message.c	/^sds message_status(sds reply)$/;"	f
+min_amount	me_config.h	/^    mpd_t               *min_amount;$/;"	m	struct:market
+min_amount	me_market.h	/^    mpd_t           *min_amount;$/;"	m	struct:market_t
+money	me_config.h	/^    char                *money;$/;"	m	struct:market
+money	me_market.h	/^    char            *money;$/;"	m	struct:market_t
+money_prec	me_config.h	/^    int                 money_prec;$/;"	m	struct:market
+money_prec	me_market.h	/^    int             money_prec;$/;"	m	struct:market_t
+mysql_conn	me_history.c	/^static MYSQL *mysql_conn;$/;"	v	file:
+mysql_conn	me_operlog.c	/^static MYSQL *mysql_conn;$/;"	v	file:
+name	me_config.h	/^    char                *name;$/;"	m	struct:asset
+name	me_config.h	/^    char                *name;$/;"	m	struct:market
+name	me_market.h	/^    char            *name;$/;"	m	struct:market_t
+on_cache_timer	me_server.c	/^static void on_cache_timer(nw_timer *timer, void *privdata)$/;"	f	file:
+on_cmd_asset_list	me_server.c	/^static int on_cmd_asset_list(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_asset_summary	me_server.c	/^static int on_cmd_asset_summary(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_asset_update	me_server.c	/^static int on_cmd_asset_update(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_balance	me_cli.c	/^static sds on_cmd_balance(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cmd_balance_deposit	me_server.c	/^static int on_cmd_balance_deposit(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_balance_freeze	me_server.c	/^static int on_cmd_balance_freeze(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_balance_get	me_cli.c	/^static sds on_cmd_balance_get(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cmd_balance_list	me_cli.c	/^static sds on_cmd_balance_list(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cmd_balance_query	me_server.c	/^static int on_cmd_balance_query(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_balance_summary	me_cli.c	/^static sds on_cmd_balance_summary(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cmd_balance_update	me_server.c	/^static int on_cmd_balance_update(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_makeslice	me_cli.c	/^static sds on_cmd_makeslice(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cmd_market	me_cli.c	/^static sds on_cmd_market(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cmd_market_depth	me_server.c	/^static int on_cmd_market_depth(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_market_list	me_server.c	/^static int on_cmd_market_list(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_market_summary	me_cli.c	/^static sds on_cmd_market_summary(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cmd_market_summary	me_server.c	/^static int on_cmd_market_summary(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_market_update	me_server.c	/^static int on_cmd_market_update(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_book	me_server.c	/^static int on_cmd_order_book(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_book_depth	me_server.c	/^static int on_cmd_order_book_depth(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_cancel	me_server.c	/^static int on_cmd_order_cancel(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_cancel_batch	me_server.c	/^static int on_cmd_order_cancel_batch(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_detail	me_server.c	/^static int on_cmd_order_detail(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_put_limit	me_server.c	/^static int on_cmd_order_put_limit(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_put_market	me_server.c	/^static int on_cmd_order_put_market(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_order_query	me_server.c	/^static int on_cmd_order_query(nw_ses *ses, rpc_pkg *pkg, json_t *params)$/;"	f	file:
+on_cmd_status	me_cli.c	/^static sds on_cmd_status(const char *cmd, int argc, sds *argv)$/;"	f	file:
+on_cron_check	me_main.c	/^static void on_cron_check(nw_timer *timer, void *data)$/;"	f	file:
+on_delivery	me_message.c	/^static void on_delivery(rd_kafka_t *rk, const rd_kafka_message_t *rkmessage, void *opaque)$/;"	f	file:
+on_job	me_history.c	/^static void on_job(nw_job_entry *entry, void *privdata)$/;"	f	file:
+on_job	me_operlog.c	/^static void on_job(nw_job_entry *entry, void *privdata)$/;"	f	file:
+on_job_cleanup	me_history.c	/^static void on_job_cleanup(nw_job_entry *entry)$/;"	f	file:
+on_job_cleanup	me_operlog.c	/^static void on_job_cleanup(nw_job_entry *entry)$/;"	f	file:
+on_job_init	me_history.c	/^static void *on_job_init(void)$/;"	f	file:
+on_job_init	me_operlog.c	/^static void *on_job_init(void)$/;"	f	file:
+on_job_release	me_history.c	/^static void on_job_release(void *privdata)$/;"	f	file:
+on_job_release	me_operlog.c	/^static void on_job_release(void *privdata)$/;"	f	file:
+on_list_free	me_message.c	/^static void on_list_free(void *value)$/;"	f	file:
+on_list_free	me_operlog.c	/^static void on_list_free(void *value)$/;"	f	file:
+on_logger	me_message.c	/^static void on_logger(const rd_kafka_t *rk, int level, const char *fac, const char *buf)$/;"	f	file:
+on_timer	me_history.c	/^static void on_timer(nw_timer *t, void *privdata)$/;"	f	file:
+on_timer	me_message.c	/^static void on_timer(nw_timer *t, void *privdata)$/;"	f	file:
+on_timer	me_operlog.c	/^static void on_timer(nw_timer *t, void *privdata)$/;"	f	file:
+on_timer	me_persist.c	/^static void on_timer(nw_timer *timer, void *privdata)$/;"	f	file:
+on_timer	me_update.c	/^static void on_timer(nw_timer *t, void *privdata)$/;"	f	file:
+operlog	me_operlog.c	/^struct operlog {$/;"	s	file:
+operlog_id_start	me_operlog.c	/^uint64_t operlog_id_start;$/;"	v
+operlog_status	me_operlog.c	/^sds operlog_status(sds reply)$/;"	f
+order_finish	me_market.c	/^static int order_finish(bool real, market_t *m, order_t *order)$/;"	f	file:
+order_free	me_market.c	/^static void order_free(order_t *order)$/;"	f	file:
+order_id	me_market.c	/^    uint64_t    order_id;$/;"	m	struct:dict_order_key	file:
+order_id_compare	me_market.c	/^static int order_id_compare(const void *value1, const void *value2)$/;"	f	file:
+order_id_start	me_market.c	/^uint64_t order_id_start;$/;"	v
+order_match_compare	me_market.c	/^static int order_match_compare(const void *value1, const void *value2)$/;"	f	file:
+order_put	me_market.c	/^static int order_put(market_t *m, order_t *order)$/;"	f	file:
+order_t	me_market.h	/^typedef struct order_t {$/;"	s
+order_t	me_market.h	/^} order_t;$/;"	t	typeref:struct:order_t
+orders	me_market.h	/^    dict_t          *orders;$/;"	m	struct:market_t
+pledge_user_balance	me_update.c	/^int pledge_user_balance(bool real, uint32_t user_id, const char *asset, const char *business, uint64_t business_id, mpd_t *change, json_t *detail)$/;"	f
+prec_save	me_balance.c	/^    int prec_save;$/;"	m	struct:asset_type	file:
+prec_save	me_config.h	/^    int                 prec_save;$/;"	m	struct:asset
+prec_show	me_balance.c	/^    int prec_show;$/;"	m	struct:asset_type	file:
+prec_show	me_config.h	/^    int                 prec_show;$/;"	m	struct:asset
+price	me_market.h	/^    mpd_t           *price;$/;"	m	struct:order_t
+process	me_config.h	/^    process_cfg         process;$/;"	m	struct:settings
+process_cache	me_server.c	/^static bool process_cache(nw_ses *ses, rpc_pkg *pkg, sds *cache_key)$/;"	f	file:
+produce_list	me_message.c	/^static void produce_list(list_t *list, rd_kafka_topic_t *topic)$/;"	f	file:
+push_balance_message	me_message.c	/^int push_balance_message(double t, uint32_t user_id, const char *asset, const char *business, mpd_t *change)$/;"	f
+push_deal_message	me_message.c	/^int push_deal_message(double t, const char *market, order_t *ask, order_t *bid, mpd_t *price, mpd_t *amount,$/;"	f
+push_message	me_message.c	/^static int push_message(char *message, rd_kafka_topic_t *topic, list_t *list)$/;"	f	file:
+push_order_message	me_message.c	/^int push_order_message(uint32_t event, order_t *order, market_t *market)$/;"	f
+read_config_from_json	me_config.c	/^static int read_config_from_json(json_t *root)$/;"	f	file:
+reply_error	me_server.c	/^static int reply_error(nw_ses *ses, rpc_pkg *pkg, int code, const char *message)$/;"	f	file:
+reply_error_internal_error	me_server.c	/^static int reply_error_internal_error(nw_ses *ses, rpc_pkg *pkg)$/;"	f	file:
+reply_error_invalid_argument	me_server.c	/^static int reply_error_invalid_argument(nw_ses *ses, rpc_pkg *pkg)$/;"	f	file:
+reply_error_service_unavailable	me_server.c	/^static int reply_error_service_unavailable(nw_ses *ses, rpc_pkg *pkg)$/;"	f	file:
+reply_json	me_server.c	/^static int reply_json(nw_ses *ses, rpc_pkg *pkg, const json_t *json)$/;"	f	file:
+reply_result	me_server.c	/^static int reply_result(nw_ses *ses, rpc_pkg *pkg, json_t *result)$/;"	f	file:
+reply_success	me_server.c	/^static int reply_success(nw_ses *ses, rpc_pkg *pkg)$/;"	f	file:
+result	me_server.c	/^    json_t      *result;$/;"	m	struct:cache_val	file:
+rk	me_message.c	/^static rd_kafka_t *rk;$/;"	v	file:
+rkt_balances	me_message.c	/^static rd_kafka_topic_t *rkt_balances;$/;"	v	file:
+rkt_deals	me_message.c	/^static rd_kafka_topic_t *rkt_deals;$/;"	v	file:
+rkt_orders	me_message.c	/^static rd_kafka_topic_t *rkt_orders;$/;"	v	file:
+set_sql	me_history.c	/^static void set_sql(struct dict_sql_key *key, sds sql)$/;"	f	file:
+settings	me_config.c	/^struct settings settings;$/;"	v	typeref:struct:settings
+settings	me_config.h	/^struct settings {$/;"	s
+side	me_market.h	/^    uint32_t        side;$/;"	m	struct:order_t
+slice_count	me_persist.c	/^static int slice_count(MYSQL *conn, time_t timestamp)$/;"	f	file:
+slice_interval	me_config.h	/^    int                 slice_interval;$/;"	m	struct:settings
+slice_keeptime	me_config.h	/^    int                 slice_keeptime;$/;"	m	struct:settings
+source	me_market.h	/^    char            *source;$/;"	m	struct:order_t
+sql_append_mpd	me_dump.c	/^static sds sql_append_mpd(sds sql, mpd_t *val, bool comma)$/;"	f	file:
+sql_append_mpd	me_history.c	/^static sds sql_append_mpd(sds sql, mpd_t *val, bool comma)$/;"	f	file:
+stock	me_config.h	/^    char                *stock;$/;"	m	struct:market
+stock	me_market.h	/^    char            *stock;$/;"	m	struct:market_t
+stock_prec	me_config.h	/^    int                 stock_prec;$/;"	m	struct:market
+stock_prec	me_market.h	/^    int             stock_prec;$/;"	m	struct:market_t
+svr	me_cli.c	/^static cli_svr *svr;$/;"	v	file:
+svr	me_config.h	/^    rpc_svr_cfg         svr;$/;"	m	struct:settings
+svr	me_server.c	/^static rpc_svr *svr;$/;"	v	file:
+svr_on_connection_close	me_server.c	/^static void svr_on_connection_close(nw_ses *ses)$/;"	f	file:
+svr_on_new_connection	me_server.c	/^static void svr_on_new_connection(nw_ses *ses)$/;"	f	file:
+svr_on_recv_pkg	me_server.c	/^static void svr_on_recv_pkg(nw_ses *ses, rpc_pkg *pkg)$/;"	f	file:
+taker_fee	me_market.h	/^    mpd_t           *taker_fee;$/;"	m	struct:order_t
+time	me_server.c	/^    double      time;$/;"	m	struct:cache_val	file:
+timer	me_history.c	/^static nw_timer timer;$/;"	v	file:
+timer	me_message.c	/^static nw_timer timer;$/;"	v	file:
+timer	me_operlog.c	/^static nw_timer timer;$/;"	v	file:
+timer	me_persist.c	/^static nw_timer timer;$/;"	v	file:
+timer	me_update.c	/^static nw_timer timer;$/;"	v	file:
+type	me_balance.h	/^    uint32_t    type;$/;"	m	struct:balance_key
+type	me_history.c	/^    uint32_t type;$/;"	m	struct:dict_sql_key	file:
+type	me_market.h	/^    uint32_t        type;$/;"	m	struct:order_t
+update_dict_hash_function	me_update.c	/^static uint32_t update_dict_hash_function(const void *key)$/;"	f	file:
+update_dict_key_compare	me_update.c	/^static int update_dict_key_compare(const void *key1, const void *key2)$/;"	f	file:
+update_dict_key_dup	me_update.c	/^static void *update_dict_key_dup(const void *key)$/;"	f	file:
+update_dict_key_free	me_update.c	/^static void update_dict_key_free(void *key)$/;"	f	file:
+update_dict_val_dup	me_update.c	/^static void *update_dict_val_dup(const void *val)$/;"	f	file:
+update_dict_val_free	me_update.c	/^static void update_dict_val_free(void *val)$/;"	f	file:
+update_key	me_update.c	/^struct update_key {$/;"	s	file:
+update_slice_history	me_persist.c	/^int update_slice_history(MYSQL *conn, time_t end)$/;"	f
+update_time	me_market.h	/^    double          update_time;$/;"	m	struct:order_t
+update_user_balance	me_update.c	/^int update_user_balance(bool real, uint32_t user_id, const char *asset, const char *business, uint64_t business_id, mpd_t *change, json_t *detail)$/;"	f
+update_user_pledge	me_update.c	/^int update_user_pledge(bool real, uint32_t user_id, const char *asset, const char *business, uint64_t business_id, mpd_t *change, json_t *detail)$/;"	f
+update_val	me_update.c	/^struct update_val {$/;"	s	file:
+user_id	me_balance.h	/^    uint32_t    user_id;$/;"	m	struct:balance_key
+user_id	me_market.c	/^    uint32_t    user_id;$/;"	m	struct:dict_user_key	file:
+user_id	me_market.h	/^    uint32_t        user_id;$/;"	m	struct:order_t
+user_id	me_update.c	/^    uint32_t    user_id;$/;"	m	struct:update_key	file:
+users	me_market.h	/^    dict_t          *users;$/;"	m	struct:market_t
